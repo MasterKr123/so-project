@@ -55,8 +55,6 @@ Despues de instalar la maquina virtual, se procedio a realizar la siguiente conf
 
 Como se puede ver, se configuro un adaptador de red Nat y Bidge. El primero permite a la máquina virtual compartir una conexión a una red física TCP/IP con el sistema operativo host.  El segundo usa un adaptador de red física para conectar la máquina virtual a una red física basada en TCP/IP como equipo independiente.
 
-
-
 Luego, se configuro las interfaces de red. Para ello usamos el servicio dhcp para que asigne las direcciones de red automaticamente.
 
 ![](configuracionInterfaces.PNG)
@@ -65,23 +63,69 @@ Tales direcciones son:
 
 ![](ipMaquina.PNG)
 
-Para trabajar de una mejor manera entre el equipo, se uso una conexion ssh. Para ello, se instalo el servicio ssh
+Para trabajar de una mejor manera entre el equipo, se uso una conexion ssh. Para ello, se instalo el servicio ssh y se habilito el puerto 22 en el firewall para que permitiera realizar la conexion.
 
 ```
 # sudo apt-get intall openssh-server -y
+# sudo ufw allow 22
 ```
 
 **Configuración de puertos**
 
-Aqui, se habilito el firewall y el puerto 8080 ya que es el que se utilizara para realizar la comunicacion http. Y finalmente se verifico que el puerto se halla habilitado.
+Aqui, se habilito el firewall y el puerto 8080 ya que es el que se utilizara para realizar la comunicacion http.
 
+Para ello se usaron los comand:
+
+```
+# sudo ufw enable
+# sudo ufw allow 8080
+```
+
+Y finalmente se verifico que el puerto se halla habilitado.
+
+# sudo ufw status verbose
+
+```
 ![](firewall.PNG)
+```
+
+**Instalación de dependencias**
+
+Las dependencias que vamos a usar son de Python y las del ambiente virtual. Para ello, se usa los siguiente comandos:
+```
+ # sudo apt-get install python3-pip
+ # sudo pip3 install virtualenv
+```
+![](instalacionVirtualEnv.PNG)
+
+**Creación de ambientes virtuales**
+
+Para crear el ambiente *ambienteProyecto* se uso el siguiente comando:
+
+```
+ # sudo virtualenv ambienteProyecto
+```
+
+Y para activarlo:
+
+```
+# source ambienteProyecto/bin/activate
+```
+
+![](ambienteProyecto.PNG)
+
+E instalamos el microservice flask 
+
+```
+# sudo pip install flask
+```
+
+![](instalacionFlask.PNG)
 
 
+**Aplicación en Python**
 
-
-
-
+Dentro del ambiente creo una carpeta *so-services* y creo el siguiente script (infoSO.py)
 
 
 
