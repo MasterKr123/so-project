@@ -6,7 +6,8 @@
 **Tema:**  Servicios web  
 **Correo:** daniel.barragan at correo.icesi.edu.co  
 **Estudiantes:** Jorge Eliecer Castaño Valencia, Alexis Cordoba.  
-**Codigos:** A00315284, A00232548.
+**Codigos:** A00315284, A00232548.  
+**Git-URL:** https://github.com/MasterKr123/so-project/  
 
 ## Objetivos
 * Desplegar una aplicación en un servidor que ejecuta el sistema operativo Linux
@@ -85,9 +86,7 @@ Y finalmente se verifico que el puerto se halla habilitado.
 
 # sudo ufw status verbose
 
-```
 ![](firewall.PNG)
-```
 
 **Instalación de dependencias**
 
@@ -130,7 +129,7 @@ Dentro del ambiente creo una carpeta *so-services* y creo el siguiente script (i
 
 ![](permisosEjecutar.PNG)
 
-Script:
+Script:  
 ![](scriptInfoSO.PNG)
 
 Como resultado de ejecutar el script obtenemos el microservicio montado:
@@ -139,9 +138,15 @@ Como resultado de ejecutar el script obtenemos el microservicio montado:
 
 Estas peticiones corresponden a la demostracion en el siguiente video:
 
-![](video.PNG)(https://youtu.be/OLGWEbXYhU0)
+[![](video.PNG)](https://youtu.be/OLGWEbXYhU0)
 
 
 ## Referencias
 * https://www.ubuntu.com/download/server
 * https://technet.microsoft.com/es-co/library/ee449441(v=ws.10).aspx
+* https://help.ubuntu.com/community/SSH/OpenSSH/Configuring
+* http://web.mit.edu/rhel-doc/3/rhel-sg-es-3/s1-server-ports.html
+* http://osl.ugr.es/2016/10/17/entornos-virtuales-en-python-con-virtualenv/
+* https://stackoverflow.com/questions/11005457/how-do-i-remove-delete-a-virtualenv
+* https://github.com/ICESI/so-microservices-python
+* https://www.youtube.com/watch?v=OLGWEbXYhU0&feature=youtu.be
