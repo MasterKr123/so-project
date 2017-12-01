@@ -96,6 +96,8 @@ Las dependencias que vamos a usar son de Python y las del ambiente virtual. Para
  # sudo apt-get install python3-pip
  # sudo pip3 install virtualenv
 ```
+
+![](instalacionPython.PNG)
 ![](instalacionVirtualEnv.PNG)
 
 **Creación de ambientes virtuales**
@@ -122,11 +124,22 @@ E instalamos el microservice flask
 
 ![](instalacionFlask.PNG)
 
-
 **Aplicación en Python**
 
-Dentro del ambiente creo una carpeta *so-services* y creo el siguiente script (infoSO.py)
+Dentro del ambiente creo una carpeta *so-services* y creo el siguiente script (infoSO.py) y le asignamos permisos de ejecución
 
+![](permisosEjecutar.PNG)
+
+Script:
+![](scriptInfoSO.PNG)
+
+Como resultado de ejecutar el script obtenemos el microservicio montado:
+
+![](ejecucionScript.PNG)
+
+Estas peticiones corresponden a la demostracion en el siguiente video:
+
+![](video.PNG)(https://youtu.be/OLGWEbXYhU0)
 
 
 ## Referencias
